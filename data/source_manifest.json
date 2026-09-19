@@ -1,0 +1,38 @@
+{
+  "retrieved": "2026-09-18",
+  "sources": [
+    {
+      "name": "HDX national reporting series",
+      "url": "https://data.humdata.org/dataset/ebola-cases-and-deaths-drc-north-kivu",
+      "publisher": "HDX; source links to DRC Ministry of Health and WHO reports",
+      "license": "CC BY-IGO (HDX metadata)",
+      "local": "raw/hdx_national.csv",
+      "sha256": "23406e88f6555e0f97c47db8c8c6a14423b81461b286f881ca53ad2e8078aa84"
+    },
+    {
+      "name": "Andersen Lab WHO-derived health-zone case changes",
+      "url": "https://github.com/andersen-lab/ebola-drc-epidemiology",
+      "gitBlob": "462f31858204db53c01d4524c3b09e466fb833cf",
+      "local": "raw/andersen_who_2018_2020.csv",
+      "actualCoverage": "Opening balance through 2018-08-05, then report intervals through 2020-01-26",
+      "sha256": "0a02e8bb0505e3abbc7195a12930d6c9f259bb48fb3ef39d2de08e17ddae2c89"
+    },
+    {
+      "name": "WHO final outbreak summary",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2020-DON284",
+      "publicationDate": "2020-06-26",
+      "asOf": "2020-06-25",
+      "local": "clean/who_final_summary.csv"
+    },
+    {
+      "name": "Province Boundary - Democratic Republic of the Congo - Administrative Boundaries (2017)",
+      "url": "https://energydata.info/dataset/democratic-republic-congo-administrative-boundaries-2017/resource/659b9621-1036-43e5-a90e-4180969a2ab5",
+      "downloadURL": "https://datacatalogfiles.worldbank.org/ddh-published/0040240/1/DR0050122/codadmbndaadm120170407.geojson",
+      "publisher": "OCHA / UNDP boundary attributes; distributed by World Bank ENERGYDATA.INFO, curated from HDX",
+      "license": "Creative Commons Attribution 4.0 (distributor metadata)",
+      "local": "maps/drc_provinces_2017.geojson",
+      "sha256": "123f137e25a64a1a2585129751ab799c5a83488f319c8de09a9a006d68e3e82a",
+      "details": "maps/map_source.json"
+    }
+  ]
+}

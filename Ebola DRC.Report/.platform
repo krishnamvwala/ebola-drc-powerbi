@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Ebola DRC"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "63fd93ba-75cb-4069-87c0-7722c309513e"
+  }
+}

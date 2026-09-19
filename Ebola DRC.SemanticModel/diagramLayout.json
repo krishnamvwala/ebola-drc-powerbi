@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 294.18269278110961,
+            "y": 300.21728500854
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "10f90ae8-a043-49c6-b8b0-442faa7bae78",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 578.38448636284227,
+            "y": 75.334036245551033
+          },
+          "nodeIndex": "Case changes",
+          "nodeLineageTag": "68e1601c-a8d4-4da7-9f8f-93b06f686d75",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 862.55804017781622,
+            "y": -10
+          },
+          "nodeIndex": "Health zones",
+          "nodeLineageTag": "fbc93914-ba97-4c56-8513-001c992be969",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 351.41174280316051
+          },
+          "nodeIndex": "National",
+          "nodeLineageTag": "ce469917-e6a8-4239-8bc2-ca06a300ab0e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136.5580401778163,
+            "y": 242.70587140158023
+          },
+          "nodeIndex": "Quality notes",
+          "nodeLineageTag": "a203803c-86f9-4d1d-b3f4-7eeb92173973",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420.5580401778163,
+            "y": 180.70587140158023
+          },
+          "nodeIndex": "WHO final",
+          "nodeLineageTag": "d291c7e8-57c7-4f37-98c9-efbd3a54c719",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Ebola DRC - Charcoal and Red",
+  "dataColors": [
+    "#AEB0B7",
+    "#E65B65",
+    "#A1A1AA",
+    "#F2F2F2",
+    "#8B4047"
+  ],
+  "background": "#202020",
+  "foreground": "#F2F2F2",
+  "tableAccent": "#E65B65",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "outspacePane": [
+          {
+            "backgroundColor": {
+              "solid": {
+                "color": "#202020"
+              }
+            },
+            "transparency": 0,
+            "border": true,
+            "borderColor": {
+              "solid": {
+                "color": "#343434"
+              }
+            }
+          }
+        ],
+        "filterCard": [
+          {
+            "$id": "Applied",
+            "backgroundColor": {
+              "solid": {
+                "color": "#202020"
+              }
+            },
+            "foregroundColor": {
+              "solid": {
+                "color": "#F2F2F2"
+              }
+            },
+            "transparency": 0,
+            "border": true
+          },
+          {
+            "$id": "Available",
+            "backgroundColor": {
+              "solid": {
+                "color": "#202020"
+              }
+            },
+            "foregroundColor": {
+              "solid": {
+                "color": "#F2F2F2"
+              }
+            },
+            "transparency": 0,
+            "border": true
+          }
+        ]
+      }
+    }
+  }
+}

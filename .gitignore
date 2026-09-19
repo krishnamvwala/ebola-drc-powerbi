@@ -1,0 +1,14 @@
+**/.pbi/
+*.pbix
+*.pbit
+**/localSettings.json
+backups/
+.env
+.env.*
+*.pem
+*.key
+node_modules/
+Thumbs.db
+.DS_Store
+publish-audit.json
+/validate_model.ps1

@@ -1,0 +1,29 @@
+{
+  "source": "Province Boundary - Democratic Republic of the Congo - Administrative Boundaries (2017)",
+  "publisher": "OCHA / UNDP boundary attributes; distributed by World Bank ENERGYDATA.INFO, curated from HDX",
+  "sourcePage": "https://energydata.info/dataset/democratic-republic-congo-administrative-boundaries-2017/resource/659b9621-1036-43e5-a90e-4180969a2ab5",
+  "downloadURL": "https://datacatalogfiles.worldbank.org/ddh-published/0040240/1/DR0050122/codadmbndaadm120170407.geojson",
+  "license": "Creative Commons Attribution 4.0 (distributor metadata)",
+  "retrieved": "2026-09-18",
+  "rawSHA256": "123f137e25a64a1a2585129751ab799c5a83488f319c8de09a9a006d68e3e82a",
+  "features": 26,
+  "affectedProvinces": [
+    "North Kivu",
+    "Ituri",
+    "South Kivu"
+  ],
+  "bbox": [
+    12.205664553597657,
+    -13.455998172361413,
+    31.30522057158543,
+    5.386098077981958
+  ],
+  "aliases": {
+    "Nord-Kivu": "North Kivu",
+    "Sud-Kivu": "South Kivu",
+    "Ituri": "Ituri"
+  },
+  "preprocessing": "Removed the exact trailing export artifact System.IO.MemoryStream from the derived copy; source preserved. Province names normalized for joins. Geometry and coordinates unchanged; lossless unquantized TopoJSON conversion.",
+  "reportingCutoff": "2020-01-26",
+  "interpretation": "Province-level reporting in the current selection, not local transmission extent. Gray provinces are geographic context, not a claim about every outbreak."
+}

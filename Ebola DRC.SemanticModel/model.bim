@@ -1,0 +1,701 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.132.1053.0 (24.08)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"National\",\"Case changes\",\"Health zones\",\"WHO final\",\"Calendar\",\"Quality notes\",\"DataFolder\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"C:/Data/ebola-drc-powerbi/data/clean/\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "cd10afe8-fb19-407b-ab39-a7fecfe9db20"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "b3524be8-940c-424d-8806-ea34a4229d59",
+        "fromColumn": "Report date",
+        "fromTable": "National",
+        "toColumn": "Date",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "95e95691-e9de-4420-bbb5-b6748fa02bfe",
+        "fromColumn": "Report date",
+        "fromTable": "Case changes",
+        "toColumn": "Date",
+        "toTable": "Calendar"
+      },
+      {
+        "name": "842e3df8-2a11-4509-ae7a-e00fd456ad94",
+        "fromColumn": "Zone key",
+        "fromTable": "Case changes",
+        "toColumn": "Zone key",
+        "toTable": "Health zones"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "National",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Report date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "lineageTag": "442e2eb2-e166-488b-b954-28a31fe18982",
+            "sourceColumn": "Report date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Publication date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "lineageTag": "c3998da0-3165-4f79-94d8-c54dff5a1369",
+            "sourceColumn": "Publication date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Confirmed cases",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "889f749e-d639-4768-aefa-0eaeefa078ab",
+            "sourceColumn": "Confirmed cases",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Probable cases",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "48cef45b-4b4e-40a2-9307-a9558a160289",
+            "sourceColumn": "Probable cases",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cumulative cases",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "ae5b4a49-16f7-415e-9798-82f16ace5c69",
+            "sourceColumn": "Cumulative cases",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cumulative deaths",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "53dd0eb2-a98f-4b14-a5aa-ce55f2ae25ca",
+            "sourceColumn": "Cumulative deaths",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cumulative recoveries",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "d9d4fa00-3d10-4dfa-8519-517c2be9e336",
+            "sourceColumn": "Cumulative recoveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Net case change",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "8518ad03-6229-470f-8ae1-a42e8962321b",
+            "sourceColumn": "Net case change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Net death change",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "61fb5517-302b-4320-b06d-b35f8c104535",
+            "sourceColumn": "Net death change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Days since previous report",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "23e8c34e-5cf8-41b9-a587-a4de8dabbecb",
+            "sourceColumn": "Days since previous report",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Source",
+            "dataType": "string",
+            "lineageTag": "3fa0f4e1-3193-4ec0-8adc-6a912b0ddd5b",
+            "sourceColumn": "Source",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ce469917-e6a8-4239-8bc2-ca06a300ab0e",
+        "measures": [
+          {
+            "name": "Reported cases",
+            "description": "Latest observation in the filter context. Never sums cumulative counts over time.",
+            "expression": "VAR SnapshotDate = MAX('National'[Report date]) RETURN CALCULATE(MAX('National'[Cumulative cases]), 'National'[Report date] = SnapshotDate)",
+            "formatString": "#,0",
+            "lineageTag": "fede3b67-c108-4f0d-a7fb-1e7225f6761c"
+          },
+          {
+            "name": "Reported deaths",
+            "expression": "VAR SnapshotDate = MAX('National'[Report date]) RETURN CALCULATE(MAX('National'[Cumulative deaths]), 'National'[Report date] = SnapshotDate)",
+            "formatString": "#,0",
+            "lineageTag": "9a3a754b-994e-405a-ae74-7f8627fddad7"
+          },
+          {
+            "name": "Reporting observations",
+            "expression": "COUNTROWS('National')",
+            "formatString": "#,0",
+            "lineageTag": "5a9ea281-9426-4047-a0f6-f7874ae658e3"
+          },
+          {
+            "name": "Longest reporting gap",
+            "expression": "MAX('National'[Days since previous report])",
+            "formatString": "#,0",
+            "lineageTag": "e95e86ab-cc2e-464e-ab83-f82f32954fb4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "National",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"national_reports.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Report date\", type date}, {\"Publication date\", type date}, {\"Confirmed cases\", Int64.Type}, {\"Probable cases\", Int64.Type}, {\"Cumulative cases\", Int64.Type}, {\"Cumulative deaths\", Int64.Type}, {\"Cumulative recoveries\", Int64.Type}, {\"Net case change\", Int64.Type}, {\"Net death change\", Int64.Type}, {\"Days since previous report\", Int64.Type}, {\"Source\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Case changes",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Report date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "lineageTag": "7bc926cc-547f-4148-8614-51bcab6dd460",
+            "sourceColumn": "Report date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Previous report date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "lineageTag": "f8b45dcb-f9f3-49f7-a78e-111218a351a0",
+            "sourceColumn": "Previous report date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Period label",
+            "dataType": "string",
+            "lineageTag": "fb572cba-f607-4393-9548-e34960759e65",
+            "sourceColumn": "Period label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Zone key",
+            "dataType": "string",
+            "lineageTag": "96bdcec1-ecc5-469d-905c-5b17f0a884d5",
+            "sourceColumn": "Zone key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Case classification",
+            "dataType": "string",
+            "lineageTag": "986159dd-27ba-42f2-a775-2b14e27afba7",
+            "sourceColumn": "Case classification",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Net case change",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "67206205-a96d-4188-b7e2-591a5f22b6d0",
+            "sourceColumn": "Net case change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Is negative revision",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "cd879663-d06c-4816-9b1e-2224f701a3a5",
+            "sourceColumn": "Is negative revision",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Is opening balance",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "aa8ae5c0-ff64-43d3-87ad-83ed94dab2b5",
+            "sourceColumn": "Is opening balance",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Interval days",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "7afa33dc-69b9-4167-8d2d-b13066ba003d",
+            "sourceColumn": "Interval days",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "68e1601c-a8d4-4da7-9f8f-93b06f686d75",
+        "measures": [
+          {
+            "name": "Net reported cases",
+            "description": "Net changes between reporting snapshots, including negative retrospective revisions and the opening balance. Not an onset-date incidence curve.",
+            "expression": "SUM('Case changes'[Net case change])",
+            "formatString": "#,0",
+            "lineageTag": "3f9fcde6-537f-4a49-bb66-ea172136ac54"
+          },
+          {
+            "name": "Confirmed case changes",
+            "expression": "CALCULATE([Net reported cases], KEEPFILTERS('Case changes'[Case classification] = \"Confirmed\"))",
+            "formatString": "#,0",
+            "lineageTag": "21f186b2-7b3e-4977-9baf-aa635d304ddc"
+          },
+          {
+            "name": "Probable case changes",
+            "expression": "CALCULATE([Net reported cases], KEEPFILTERS('Case changes'[Case classification] = \"Probable\"))",
+            "formatString": "#,0",
+            "lineageTag": "704288a3-e237-4bc2-8be3-442b607237f0"
+          },
+          {
+            "name": "Negative revision records",
+            "expression": "CALCULATE(COUNTROWS('Case changes'), 'Case changes'[Is negative revision] = 1)",
+            "formatString": "#,0",
+            "lineageTag": "bd7ff491-3246-4b30-9f10-15b3fbe54605"
+          },
+          {
+            "name": "Health zones in selection",
+            "expression": "DISTINCTCOUNT('Case changes'[Zone key])",
+            "formatString": "#,0",
+            "lineageTag": "39339f0a-7320-4e5e-8a89-e5f52aba4934"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Case changes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"health_zone_case_changes.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Report date\", type date}, {\"Previous report date\", type date}, {\"Period label\", type text}, {\"Zone key\", type text}, {\"Case classification\", type text}, {\"Net case change\", Int64.Type}, {\"Is negative revision\", Int64.Type}, {\"Is opening balance\", Int64.Type}, {\"Interval days\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Health zones",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Zone key",
+            "dataType": "string",
+            "lineageTag": "c6192d02-820a-4d47-a7df-41c2ee092061",
+            "sourceColumn": "Zone key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Province",
+            "dataType": "string",
+            "lineageTag": "69cb0676-733f-4e11-a761-13fdc87e4a04",
+            "sourceColumn": "Province",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Health zone",
+            "dataType": "string",
+            "lineageTag": "73340775-14cc-4c26-b5a0-8666cc3eda5c",
+            "sourceColumn": "Health zone",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "lineageTag": "036c51a9-6dd9-4c00-a1c9-0e5f7750d150",
+            "sourceColumn": "Country",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fbc93914-ba97-4c56-8513-001c992be969",
+        "partitions": [
+          {
+            "name": "Health zones",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"health_zones.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Zone key\", type text}, {\"Province\", type text}, {\"Health zone\", type text}, {\"Country\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "WHO final",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "As of date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "lineageTag": "66383b0a-a6c6-4cf8-9771-17e91d0644fe",
+            "sourceColumn": "As of date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Confirmed cases",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "ef75978c-a323-4c2d-b475-308d355585f0",
+            "sourceColumn": "Confirmed cases",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Probable cases",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "b52c5879-28d2-4983-85df-f3deff0fe095",
+            "sourceColumn": "Probable cases",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Total cases",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "1eee69b6-d9e4-47c4-b9e2-f5e9b0763d00",
+            "sourceColumn": "Total cases",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deaths",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "f01f8a7f-ea33-4649-bcec-12efda6a20af",
+            "sourceColumn": "Deaths",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Reported recoveries",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "81b0ce28-a209-4434-9f4f-00ab68e833b4",
+            "sourceColumn": "Reported recoveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Affected health zones",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "5818159c-d3fe-4b9d-9df8-b0f43643ce62",
+            "sourceColumn": "Affected health zones",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Source",
+            "dataType": "string",
+            "lineageTag": "85357a70-79c8-429e-9037-39363eb1afcc",
+            "sourceColumn": "Source",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d291c7e8-57c7-4f37-98c9-efbd3a54c719",
+        "measures": [
+          {
+            "name": "Final cases",
+            "description": "WHO final total, as of 25 June 2020.",
+            "expression": "SUM('WHO final'[Total cases])",
+            "formatString": "#,0",
+            "lineageTag": "313f8609-1078-4ee5-8037-db3fe33cc230"
+          },
+          {
+            "name": "Final deaths",
+            "expression": "SUM('WHO final'[Deaths])",
+            "formatString": "#,0",
+            "lineageTag": "f2a3b191-0ff3-46b1-9c9b-799f7263420a"
+          },
+          {
+            "name": "Final case fatality ratio",
+            "description": "Reported deaths divided by confirmed plus probable cases, same final date.",
+            "expression": "DIVIDE([Final deaths], [Final cases])",
+            "formatString": "0.0%",
+            "lineageTag": "fca61030-e42b-4b1a-9261-20b6d65ec659"
+          },
+          {
+            "name": "Final affected health zones",
+            "expression": "MAX('WHO final'[Affected health zones])",
+            "formatString": "#,0",
+            "lineageTag": "a729bfdb-6d68-49e4-b7a9-1c1e863501a7"
+          },
+          {
+            "name": "Final confirmed",
+            "expression": "SUM('WHO final'[Confirmed cases])",
+            "formatString": "#,0",
+            "lineageTag": "b69158f0-87db-48ec-ae80-8f2c3344759f"
+          },
+          {
+            "name": "Final probable",
+            "expression": "SUM('WHO final'[Probable cases])",
+            "formatString": "#,0",
+            "lineageTag": "2f939615-e35f-4e15-867b-8e3dc967bcad"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "WHO final",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"who_final_summary.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"As of date\", type date}, {\"Confirmed cases\", Int64.Type}, {\"Probable cases\", Int64.Type}, {\"Total cases\", Int64.Type}, {\"Deaths\", Int64.Type}, {\"Reported recoveries\", Int64.Type}, {\"Affected health zones\", Int64.Type}, {\"Source\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "a7f5dfd9-ef81-4dd8-aa7e-81eb40642af7"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "isKey": true,
+            "lineageTag": "ef5db5f5-4c28-4a36-b6cd-f4af2a408beb",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "30106c29-0d5b-41db-b75b-e24ee729ddd2",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "lineageTag": "d781b81f-39fd-4d13-bf7d-5e79afecc86c",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "10f90ae8-a043-49c6-b8b0-442faa7bae78",
+        "partitions": [
+          {
+            "name": "Calendar",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"calendar.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Month\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Quality notes",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Dataset",
+            "dataType": "string",
+            "lineageTag": "c3707c0c-4ee1-4888-9065-a15cb69ac2cd",
+            "sourceColumn": "Dataset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd MMM yyyy",
+            "lineageTag": "44df1d75-4633-4919-8691-f4bd3afe9e09",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Issue",
+            "dataType": "string",
+            "lineageTag": "c6f757ac-224c-44cc-a3a6-9a61cd831f27",
+            "sourceColumn": "Issue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Detail",
+            "dataType": "string",
+            "lineageTag": "f204c5d8-6f02-4f52-b1cf-065a2becbeea",
+            "sourceColumn": "Detail",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a203803c-86f9-4d1d-b3f4-7eeb92173973",
+        "partitions": [
+          {
+            "name": "Quality notes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"quality_notes.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Dataset\", type text}, {\"Date\", type date}, {\"Issue\", type text}, {\"Detail\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

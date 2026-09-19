@@ -1,0 +1,9 @@
+* text=auto
+*.pbix binary
+*.png binary
+*.jpg binary
+data/raw/* -text
+data/maps/*.geojson -text
+data/maps/*.topojson -text
+data/clean/*.csv -text
+Ebola[[:space:]]DRC.Report/StaticResources/RegisteredResources/DRC_Provinces_2017.json -text
