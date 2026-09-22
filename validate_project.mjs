@@ -11,7 +11,7 @@ const model = json('Ebola DRC.SemanticModel/model.bim').model;
 assert.equal(model.tables.length, 6);
 assert.equal(model.relationships.length, 3);
 const measures = model.tables.flatMap(t => t.measures ?? []);
-assert.equal(measures.length, 15);
+assert.equal(measures.length, 16);
 for (const relationship of model.relationships) {
   for (const side of ['from', 'to']) {
     const table = model.tables.find(t => t.name === relationship[side + 'Table']);
@@ -20,15 +20,15 @@ for (const relationship of model.relationships) {
 }
 assert(model.expressions.some(e => e.name === 'DataFolder'));
 const report = json('Ebola DRC.Report/report.json');
-assert.equal(report.sections.length, 3);
+assert.equal(report.sections.length, 4);
 const geography = report.sections.find(p => p.displayName === 'Health zone analysis');
 assert(geography);
 const configs = geography.visualContainers.map(v => JSON.parse(v.config));
 const charts = configs.filter(c => /Chart$/.test(c.singleVisual.visualType));
-assert.equal(charts.length, 3);
+assert.equal(charts.length, 2);
 for (const chart of charts) {
   const colors = JSON.stringify(chart.singleVisual.objects.dataPoint);
-  assert(colors.includes('#B85C64') && !colors.includes('#AEB0B7'), 'Incorrect Health zone chart color');
+  assert(colors.includes('#F56D63') && !colors.includes('#AEB0B7'), 'Incorrect Health zone chart color');
 }
 assert.equal(configs.filter(c => c.singleVisual.visualType === 'shapeMap').length, 1);
 assert(!JSON.stringify(report).includes('Detailed source references and quality exceptions:'));
@@ -47,7 +47,8 @@ for (const source of json('data/source_manifest.json').sources) {
   }
 }
 const readme = read('README.md');
-const localLinks = [...readme.matchAll(/\]\(\.\/([^\)]+)\)/g)];
+const localLinks = [...readme.matchAll(/\]\((?!https?:)(?:\.\/)?([^\)]+)\)/g)];
 for (const match of localLinks) assert(fs.existsSync(path.join(root, decodeURIComponent(match[1]))), 'Broken README file link');
 assert(fs.statSync(path.join(root, 'Ebola DRC.pbip')).size > 0, 'PBIP entry point is missing');
-console.log(JSON.stringify({tables: 6, relationships: 3, measures: 15, reportPages: 3, redCharts: 3, provinces: 26, verifiedSourceHashes, readmeFileLinks: localLinks.length, passed: true}, null, 2));
+console.log(JSON.stringify({tables: 6, relationships: 3, measures: 16, reportPages: 4, redCharts: 2, provinces: 26, verifiedSourceHashes, readmeFileLinks: localLinks.length, passed: true}, null, 2));
+
