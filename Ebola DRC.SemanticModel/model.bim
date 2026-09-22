@@ -354,6 +354,17 @@
             "expression": "DISTINCTCOUNT('Case changes'[Zone key])",
             "formatString": "#,0",
             "lineageTag": "39339f0a-7320-4e5e-8a89-e5f52aba4934"
+          },
+          {
+            "name": "Top 10 net reported cases",
+            "description": "Display-only top-ten ranking within selected filters; the overall Net reported cases measure is unchanged. Ties are resolved alphabetically.",
+            "expression": [
+              "VAR TopZones = TOPN(10, ALLSELECTED('Health zones'[Health zone]), CALCULATE([Net reported cases]), DESC, 'Health zones'[Health zone], ASC)",
+              "VAR CurrentZone = SELECTEDVALUE('Health zones'[Health zone])",
+              "RETURN IF(CONTAINS(TopZones, 'Health zones'[Health zone], CurrentZone), [Net reported cases], BLANK())"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Report display"
           }
         ],
         "partitions": [
@@ -699,3 +710,4 @@
     ]
   }
 }
+
